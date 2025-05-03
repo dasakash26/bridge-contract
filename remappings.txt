@@ -1,0 +1,2 @@
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol    
+@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/
