@@ -1,0 +1,17 @@
+{
+  "name": "Akash Coin",
+  "logoURI": "https://creatorset.com/cdn/shop/files/preview_images/Screenshot_2024-04-24_173231_530x@2x.png?v=1713973028",
+  "tokens": [
+    {
+      "chainId": 11155111,
+      "address": "0x9ae0b3368b429fa79732cb3a728cfbf6454bfb73",
+      "symbol": "AKA",
+      "name": "AkashCoin",
+      "decimals": 18,
+      "logoURI": "https://creatorset.com/cdn/shop/files/preview_images/Screenshot_2024-04-24_173231_530x@2x.png?v=1713973028"
+    }
+  ]
+}
+
+
+

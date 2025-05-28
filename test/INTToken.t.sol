@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
-import "src/AkashCoin.sol";
+import "src/INRToken.sol";
 
-contract TestAkashCoin is Test {
-    AkashCoin c;
+contract TestINRToken is Test {
+    INRToken c;
     address akash = address(0x123);
 
     event Transfer(address indexed from, address indexed to, uint256 value);
@@ -14,7 +14,7 @@ contract TestAkashCoin is Test {
         uint256 value
     );
     function setUp() public {
-        c = new AkashCoin(6969);
+        c = new INRToken(6969);
     }
 
     function testInitialBalance() public {

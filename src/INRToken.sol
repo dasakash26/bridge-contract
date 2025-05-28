@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.13;
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-import {ERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
-
-
-contract AkashCoin is ERC20{ 
+contract INRToken is ERC20{
     address owner;
 
-    constructor(uint amount) ERC20("AkashCoin", "AKA") {
+    constructor(uint amount) ERC20("INRToken", "INRT") {
         _mint(msg.sender, amount * 10 ** decimals());
         owner = msg.sender;
     }

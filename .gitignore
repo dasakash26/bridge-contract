@@ -1,2 +1,28 @@
-cache/
+# Foundry build artifacts
 out/
+cache/
+
+.env
+.env.*
+
+# VSCode settings (optional)
+.vscode/
+
+# MacOS
+.DS_Store
+
+# node_modules if you're using npm packages
+node_modules/
+
+# Forge standard library
+lib/
+
+# IntelliJ/IDEA config files
+.idea/
+*.iml
+
+# JetBrains IDE run config logs
+run-*.json
+
+# Solidity coverage and test artifacts (optional)
+coverage/
