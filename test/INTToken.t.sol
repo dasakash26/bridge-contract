@@ -18,9 +18,8 @@ contract TestINRToken is Test {
         c = new INRToken(6969);
     }
 
-    function testInitialBalance() public {
+    function testInitialBalance() public view{
         uint256 amount = 6969 * 10 ** c.decimals();
-
         assertEq(c.balanceOf(address(this)), amount);
     }
 

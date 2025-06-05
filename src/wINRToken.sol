@@ -5,11 +5,8 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 //assume this is the wrapped version of INRToken on base network
 contract wINRToken is ERC20, Ownable {
-    address owner;
-
     constructor(uint amount) ERC20("wINRToken", "wINRT") Ownable(msg.sender) {
         _mint(msg.sender, amount * 10 ** decimals());
-        owner = msg.sender;
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
