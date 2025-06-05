@@ -8,6 +8,7 @@ interface IWINR is IERC20 {
     function mint(address _to, uint256 _amount) external;
     function burn(address _from, uint256 _amount) external;
 }
+
 contract BridgeBase is Ownable {
     address public tokenAddress;
     mapping(address => uint256) public pendingBalance;
@@ -18,20 +19,19 @@ contract BridgeBase is Ownable {
         tokenAddress = _tokenAddress;
     }
 
-    function mint() public {
-
+    function mint(address userAddress, uint256 _amount) public onlyOwner {
+        IWINR(tokenAddress).mint(userAddress, _amount);
     }
 
-    function burn(IWINR _tokenAddress, uint256 _amount) public {
-        require(address(_tokenAddress) == tokenAddress);
-        _tokenAddress.burn(msg.sender, _amount);
+    function burn(uint256 _amount) public {
+        IWINR(tokenAddress).burn(msg.sender, _amount);
         emit Burn(msg.sender, _amount);
     }
 
     function depositedOnOtherSide(
-        IWINR userAddress,
+        address userAddress,
         uint256 _amount
     ) public onlyOwner {
-        pendingBalance[address(userAddress)] += _amount;
+        pendingBalance[userAddress] += _amount;
     }
 }
