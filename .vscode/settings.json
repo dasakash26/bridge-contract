@@ -1,5 +1,5 @@
 {
   "solidity.packageDefaultDependenciesContractsDirectory": "src",
   "solidity.packageDefaultDependenciesDirectory": "lib",
-  "cSpell.words": ["Akash", "ayush"]
+  "cSpell.words": ["Akash", "ayush", "IERC", "INRT"]
 }

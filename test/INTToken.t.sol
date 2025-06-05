@@ -13,6 +13,7 @@ contract TestINRToken is Test {
         address indexed spender,
         uint256 value
     );
+    
     function setUp() public {
         c = new INRToken(6969);
     }

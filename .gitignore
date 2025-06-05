@@ -1,7 +1,8 @@
 # Foundry build artifacts
 out/
 cache/
-
+.vscode/
+.vscode
 .env
 .env.*
 
