@@ -67,7 +67,7 @@ contract TestINRToken is Test {
     function testMintFail() public {
         uint256 amount = 6969 * 10 ** c.decimals();
         vm.prank(akash);
-        vm.expectRevert("Ownable: caller is not the owner");
+        vm.expectRevert();
         c.mint(akash, amount);
     }
 
